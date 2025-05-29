@@ -14,3 +14,8 @@ The dataset includes multiple CSV files, each representing a table in the databa
 * olist_products_dataset.csv: Product information (product ID, category).
 * olist_customers_dataset.csv: Customer details (customer ID, state).
 * olist_order_payments_dataset.csv: Payment information (order ID, payment value).
+
+Create the Database:
+
+Create Tables:
+
