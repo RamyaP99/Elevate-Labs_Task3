@@ -21,23 +21,23 @@ Create Tables:
 
 #### Import Data:
 
-LOAD DATA LOCAL INFILE:
+### LOAD DATA LOCAL INFILE:
 
 I encountered the --secure-file-priv error,
 
-1)so i moved CSV files to allowed directory
+1) i moved CSV files to allowed directory
 
---Check the allowed directory:
+   --Check the allowed directory:
   
        sql
 
        SHOW VARIABLES LIKE 'secure_file_priv';
 
-2)i enabled local_infile:
+2) i enabled local_infile:
 
-    SHOW VARIABLES LIKE 'local_infile';
+        SHOW VARIABLES LIKE 'local_infile';
 
-    SET GLOBAL local_infile = 1;
+        SET GLOBAL local_infile = 1;
 
 3) imported csv data to created tables:
 
