@@ -15,9 +15,30 @@ The dataset includes multiple CSV files, each representing a table in the databa
 * olist_customers_dataset.csv: Customer details (customer ID, state).
 * olist_order_payments_dataset.csv: Payment information (order ID, payment value).
 
-Create the Database:
+#### Create the Database:
 
-Create Tables:
+Run the following SQL to create a database:
+
+        sql
+
+        CREATE DATABASE olist_ecommerce;
+        
+        USE olist_ecommerce;
+
+#### Create Tables:
+
+Based on the Olist dataset, create tables matching the CSV structure. Here’s an example for key tables (adjust column types if needed):
+
+        sql
+
+         -- Table for orders
+         CREATE TABLE orders (
+             order_id VARCHAR(50) PRIMARY KEY,
+             customer_id VARCHAR(50),
+             order_status VARCHAR(20),
+             order_purchase_timestamp DATETIME,
+             order_delivered_timestamp DATETIME
+         );
 
 #### Import Data:
 
