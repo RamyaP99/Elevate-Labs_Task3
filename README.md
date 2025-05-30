@@ -58,12 +58,12 @@ I encountered the --secure-file-priv error,
 
 3) Imported csv data to created tables: Using SQL LOAD DATA
    
-      LOAD DATA INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/olist_customers_dataset.csv"
-      INTO TABLE olist_customers_dataset
-      FIELDS TERMINATED BY ',' 
-      ENCLOSED BY '"'
-      LINES TERMINATED BY '\n'
-      IGNORE 1 ROWS;
+         LOAD DATA INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/olist_customers_dataset.csv"
+         INTO TABLE olist_customers_dataset
+         FIELDS TERMINATED BY ',' 
+         ENCLOSED BY '"'
+         LINES TERMINATED BY '\n'
+         IGNORE 1 ROWS;
     
 #### SQL Queries
 
