@@ -22,7 +22,6 @@ Run the following SQL to create a database:
         sql
 
         CREATE DATABASE olist_ecommerce;
-        
         USE olist_ecommerce;
 
 #### Create Tables:
@@ -42,11 +41,9 @@ Based on the Olist dataset, create tables matching the CSV structure. Here’s a
 
 #### Import Data:
 
-### LOAD DATA LOCAL INFILE:
-
 I encountered the --secure-file-priv error,
 
-1) i moved CSV files to allowed directory
+1) Moved CSV files to allowed directory
 
    --Check the allowed directory:
   
@@ -54,14 +51,20 @@ I encountered the --secure-file-priv error,
 
        SHOW VARIABLES LIKE 'secure_file_priv';
 
-2) i enabled local_infile:
+2) Enabled local_infile:
 
         SHOW VARIABLES LIKE 'local_infile';
-
         SET GLOBAL local_infile = 1;
 
-3) imported csv data to created tables:
-
+3) Imported csv data to created tables: Using SQL LOAD DATA
+   
+      LOAD DATA INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/olist_customers_dataset.csv"
+      INTO TABLE olist_customers_dataset
+      FIELDS TERMINATED BY ',' 
+      ENCLOSED BY '"'
+      LINES TERMINATED BY '\n'
+      IGNORE 1 ROWS;
+    
 #### SQL Queries
 
 1. Top 5 Most Frequently Ordered Product Categories
